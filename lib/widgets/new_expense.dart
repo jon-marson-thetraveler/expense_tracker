@@ -97,23 +97,23 @@ class _NewExpenseState extends State<NewExpense> {
           ),
           Row(
             children: [
-              // Alternate method:
-              // DropdownButton(
-              //   items: Category.values
-              //       .map(
-              //         (category) => DropdownMenuItem(
-              //           child: Text(
-              //             category.name.toString(),
-              //           ),
-              //         ),
-              //       )
-              //       .toList(),
-              //   onChanged: (value) {
-              //     print(value);
-              //   },
-              // ),
+              // Course method:
+              DropdownButton(
+                items: Category.values
+                    .map(
+                      (category) => DropdownMenuItem(
+                        child: Text(
+                          category.name.toString(),
+                        ),
+                      ),
+                    )
+                    .toList(),
+                onChanged: (value) {
+                  print(value);
+                },
+              ),
               //
-              // method in course:
+              // Alternate method:
               // DropdownButton(
               //     items: internalCategories
               //         .map<DropdownMenuItem<String>>((String value) {
